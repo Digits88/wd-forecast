@@ -2,7 +2,7 @@ Forecast Weather
 ================
 
 ## Demo
-This demo is running from [gh-pages](https://github.com/martinmicunda/wd-forecast/tree/gh-pages) branch.
+This demo is running from [gh-pages](https://github.com/martinmicunda/wd-forecast/tree/gh-pages) branch. <a href="http://martinmicunda.github.io/wd-forecast" target="_blank">Click here to see it in action!</a>
 
 ##<a name="installation-and-configuration"></a>Installation & Configuration
 
