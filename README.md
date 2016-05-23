@@ -25,8 +25,7 @@ $ npm install
 ```
 > **Note:** Verify that all 3rd party dependencies from [package.json](package.json) are installed on your local machine. If you have followed the instructions and there have been no errors when executing the above commands, the dependencies should be installed.
      
-##<a name="how-to-run"></a>How to Run
-
+## <a name="how-to-run"></a>How to Run
 ###<a name="how-to-run-development"></a>
 
 ```bash
@@ -40,9 +39,6 @@ If you don't want to launch the browser when serving code then pass `--open=fals
 ```bash
 $ npm start -- --open=false
 ```
-
-###<a name="how-to-run-production"></a>Production
-When you're working on project with real back-end and want to try production bundle start with:
 
 ##<a name="how-to-build">How to Build
 The build task get app ready for production. The build task include transpilation from ES6 to ES5, concatenation, minification, compression, asset revision, template cache, cdn etc. If there have been no errors when executing the build command, the build should be located in `build/dist` directory and this build is ready for uploading to the server! To initiate a full build, you simply run the follow task:
