@@ -1,0 +1,47 @@
+<div class="main-wrapper container-fluid">
+    <div class="main-wrapper-mask"></div>
+    <div class="main-wrapper-blur" style="background-image: url(../../images/paris-lg.jpg)"></div>
+    <div class="main-wrapper-front">
+        <div class="full-center">
+            <div class="widget-block">
+                <!-- MAIN AREA -->
+                <div class="img-area">
+                    <div class="img-area-mask"></div>
+                    <img src="../../images/paris-sm.jpg" alt="">
+                    <div class="img-area-front">
+                        <h5 class="location">{{vm.forecasts.city.name}}</h5>
+                        <p class="today">{{vm.forecastToday.date | date: 'EEEE, MMMM d'}}</p>
+                        <div class="weather-desc">
+                            <span>{{::vm.forecastToday.weather[0].description}}</span>
+                        </div>
+                        <ul class="weather-block-info">
+                            <li>
+                                <p class="temperature">{{::vm.forecastToday.main.temp | number:0}}</p>
+                            </li>
+                            <li class="weather-main">
+                                <i class="wi wi-day-rain"></i>
+                            </li>
+                            <li>
+                                <ul class="weather-params">
+                                    <li><i class="wi wi-moon-new"></i> <span>{{::vm.forecastToday.main.humidity}}% humidity</span></li>
+                                    <li><i class="wi wi-strong-wind"></i> <span>{{::vm.forecastToday.wind.speed}} meter/sec</span></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <ul class="week-forecast row">
+                    <li ng-repeat="f in vm.forecasts track by $index" class="{{f.weather[0].id | forecastLabel}}">
+                        <div class="inner">
+                            <h5 class="week-day">{{f.date | date: 'EEEE'}}</h5>
+                            <i class="wi wi-{{f.weather[0].id | forecastLabel}}"></i>
+                            <p class="week-day-temperature">{{f.main.temp | number:0}}</p>
+                        </div>
+                    </li>
+                </ul>
+                <!-- /WEATHER FORECAST -->
+            </div>
+        </div>
+    </div>
+</div>
